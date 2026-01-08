@@ -66,7 +66,7 @@ Sistema de CRM (Customer Relationship Management) desenvolvido especialmente par
 - Criptografia de dados sensíveis
 - Consentimento explícito
 
-## ⚙️ Instalação
+## ⚙️ Instalação e uso local
 
 ### Pré-requisitos
 
@@ -80,12 +80,12 @@ Sistema de CRM (Customer Relationship Management) desenvolvido especialmente par
 cd CRMigreja
 ```
 
-2. Crie um ambiente virtual (recomendado):
+2. Crie e ative um ambiente virtual (recomendado):
 ```bash
-python -m venv venv
-venv\Scripts\activate  # Windows
+python -m venv .venv
+.\.venv\Scripts\activate  # Windows
 # ou
-source venv/bin/activate  # Linux/Mac
+source .venv/bin/activate  # Linux/Mac
 ```
 
 3. Instale as dependências:
@@ -93,12 +93,24 @@ source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
 ```
 
-4. Execute o aplicativo:
+4. Execute o aplicativo Streamlit:
 ```bash
 streamlit run app.py
 ```
 
 5. Acesse no navegador: `http://localhost:8501`
+
+### Comandos rápidos
+
+- Atualizar dependências: `pip install -U -r requirements.txt`
+- Limpar cache do Streamlit: `streamlit cache clear`
+- Desativar o venv: `deactivate`
+
+### Notas de execução
+
+- O banco SQLite é criado em `data/crm_igreja.db`; a pasta `data/uploads/galeria` guarda imagens enviadas.
+- Evite abrir múltiplas instâncias de edição que escrevam no banco ao mesmo tempo para reduzir "database is locked".
+- Warnings de `use_container_width` são do Streamlit; atualize componentes conforme necessário nas telas de dashboard.
 
 ## 🔑 Acesso Demo
 

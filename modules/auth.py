@@ -125,11 +125,7 @@ def login_page():
             email = st.text_input("📧 E-mail", placeholder="seu@email.com")
             senha = st.text_input("🔒 Senha", type="password", placeholder="Sua senha")
             
-            col_btn1, col_btn2 = st.columns(2)
-            with col_btn1:
-                submit = st.form_submit_button("🚀 Entrar", use_container_width=True)
-            with col_btn2:
-                st.form_submit_button("📝 Criar conta", use_container_width=True, disabled=True)
+            submit = st.form_submit_button("🚀 Entrar", use_container_width=True)
             
             if submit:
                 if not email or not senha:
@@ -143,6 +139,8 @@ def login_page():
                         st.rerun()
                     else:
                         st.error("❌ E-mail ou senha inválidos!")
+
+        st.caption("Contas são criadas pelo administrador do sistema. Entre em contato para obter acesso.")
         
         st.markdown("---")
         st.markdown("""
