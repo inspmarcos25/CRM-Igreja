@@ -1,0 +1,36 @@
+# Ignorar ambiente virtual
+venv/
+env/
+.env
+
+# Dados do banco
+data/
+*.db
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Distribuição
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.tmp
+*.temp
